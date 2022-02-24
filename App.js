@@ -2,13 +2,17 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from "./src/screens/HomeScreen";
 import ComponentScreen from "./src/screens/ComponentScreen";
-import {createNativeStackNavigator} from "react-native-screens/native-stack";
+
 import ListView from "./src/screens/ListView";
 import ImageScreen from "./src/screens/ImageScreen";
 import CounterScreen from "./src/screens/CounterScreen";
 import {NavigationContainer} from "@react-navigation/native";
 import ColorScreen from "./src/screens/ColorScreen";
 import SquareScreen from "./src/screens/SquareScreen";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import TextScreen from "./src/screens/TextScreen";
+import BoxModelScreen from "./src/screens/BoxModelScreen";
+import BoxPositioning from "./src/screens/BoxPositioning";
 
 
 const Stack = createNativeStackNavigator();
@@ -23,6 +27,9 @@ export default function App() {
               <Stack.Screen name="Counter" component={CounterScreen} />
               <Stack.Screen name="Color" component={ColorScreen} />
               <Stack.Screen name="SquareColor" component={SquareScreen} />
+              <Stack.Screen name="Text" component={TextScreen} />
+              <Stack.Screen name="BoxModel" component={BoxModelScreen} />
+              <Stack.Screen name="BoxPosition" component={BoxPositioning} />
           </Stack.Navigator>
       </NavigationContainer>
   );
